@@ -743,7 +743,7 @@ defmodule Mongo do
         %{"n" => 1, "upserted" => upserted_id} ->
           {:ok, %Mongo.UpdateResult{matched_count: 0, modified_count: 1, upserted_id: upserted_id}}
         %{"n" => n} ->
-          {:ok, %Mongo.UpdateResult{matched_count: n, modified_count: n}, {:doc, doc}, {replly, reply} }
+          {:ok, %Mongo.UpdateResult{matched_count: n, modified_count: n}, {:doc, doc}, {:replly, reply} }
       end
     end
   end
